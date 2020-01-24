@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\CloneGit\Loundry\Loundry\obj\Debug\
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\
 Loundry
 none
 false
 DEBUG;TRACE
-D:\CloneGit\Loundry\Loundry\App.xaml
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\App.xaml
 21862119129
 
-11-792835711
-16-1750293368
+8-402668349
+17-348977113
 View\MainWindow.xaml;View\Window1.xaml;
 
-True
+False
 

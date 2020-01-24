@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dapper;
 
 namespace Loundry
 {
@@ -23,6 +24,8 @@ namespace Loundry
     /// </summary>
     public partial class MainWindow : Window
     {
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,53 +33,49 @@ namespace Loundry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var check = connection.QueryAsync<Login>("EXEC SP_Retrieve_Login_loundry @email,@password",
+                new { email = tb_Email.Text, password = tb_Password.Password }).Result.SingleOrDefault();
 
 
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FMOKJG0\OPIK;Initial Catalog=Bootcamp; User ID=sa;Password=opik;");
-            try
+            if (check != null)
             {
-                if (con.State == System.Data.ConnectionState.Closed)
-                    con.Open();
-                String query = "select count(1) from TB_M_Login_Loundry where email=@email and password=@password";
-                SqlCommand sqlCmd = new SqlCommand(query, con);
-                sqlCmd.CommandType = System.Data.CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@email", tb_Email.Text);
-                sqlCmd.Parameters.AddWithValue("@password", tb_Password.Password);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-
-                if(count == 1)
-                {
-                    MessageBox.Show("Lgoin Berhasil");
-                }
-                else
-                {
-                    MessageBox.Show("Login Filled");
-                }
+                MessageBox.Show("Login Sukses");
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show(exception.Message);
-            }
-            finally
-            {
-                con.Close();
+                MessageBox.Show("Login gagal");
             }
 
 
-            //SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
-            //var check = sqlConnection.QueryAsync<Login>("EXCEC SP_Retrieve_Login_loundry @email, @password",
-            //    new { email = tb_Email.Text, password = tb_Password.Password }).Result.SingleOrDefault();
-            
-
-            //if( tb_Email.Text == "")
+            //    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FMOKJG0\OPIK;Initial Catalog=Bootcamp; User ID=sa;Password=opik;");
+            //try
             //{
-            //    MessageBox.Show("Isikan email");
+            //    if (con.State == System.Data.ConnectionState.Closed)
+            //        con.Open();
+            //    String query = "select count(1) from TB_M_Login_Loundry where email=@email and password=@password";
+            //    SqlCommand sqlCmd = new SqlCommand(query, con);
+            //    sqlCmd.CommandType = System.Data.CommandType.Text;
+            //    sqlCmd.Parameters.AddWithValue("@email", tb_Email.Text);
+            //    sqlCmd.Parameters.AddWithValue("@password", tb_Password.Password);
+            //    int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+
+            //    if (count == 1)
+            //    {
+            //        MessageBox.Show("Lgoin Berhasil");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Login Filled");
+            //    }
             //}
-            //else if( tb_Password.Password == "")
+            //catch (Exception exception)
             //{
-            //    MessageBox.Show("Isikan Password");
+            //    MessageBox.Show(exception.Message);
             //}
-            //else if()
+            //finally
+            //{
+            //    con.Close();
+            //}
         }
     }
 }

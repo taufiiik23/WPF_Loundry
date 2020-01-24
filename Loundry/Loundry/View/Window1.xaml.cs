@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Loundry.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +39,12 @@ namespace Loundry.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }
