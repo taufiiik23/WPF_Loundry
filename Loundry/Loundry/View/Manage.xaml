@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="Loundry.View.Manage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Loundry.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="850">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="43*"/>
+        </Grid.RowDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="700" Margin="3,2,-2,-2" VerticalAlignment="Top" Width="849" Grid.RowSpan="2">
+            <TabItem Header="Karyawan" FontSize="16">
+                <Grid Background="#FFE5E5E5" Margin="4,11,1,-2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="961*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Data Karyawan" HorizontalAlignment="Left" Height="490" Margin="3,14,0,0" VerticalAlignment="Top" Width="758" Background="#FFF9F9F9" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid Background="#FFE1F9D6">
+                            <TextBox HorizontalAlignment="Left" Height="22" Margin="128,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Id" HorizontalAlignment="Left" Margin="3,32,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="No. Telfon" HorizontalAlignment="Left" Margin="3,113,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="24" Margin="128,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Nama " HorizontalAlignment="Left" Margin="3,72,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="24" Margin="128,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Alamat" HorizontalAlignment="Left" Margin="3,153,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="22" Margin="128,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Tempat Lahir" HorizontalAlignment="Left" Margin="3,272,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="22" Margin="128,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Tanggal Lahir" HorizontalAlignment="Left" Margin="3,312,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <DatePicker HorizontalAlignment="Left" Margin="130,315,0,0" VerticalAlignment="Top" Width="198" BorderBrush="#89000000" FontSize="12" FontWeight="Bold" Background="{x:Null}" OpacityMask="Black"/>
+                            <Label Content="NIK " HorizontalAlignment="Left" Margin="408,75,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="22" Margin="509,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Email" HorizontalAlignment="Left" Margin="408,155,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="22" Margin="509,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="NPWP" HorizontalAlignment="Left" Margin="408,195,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="24" Margin="509,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Universitas" HorizontalAlignment="Left" Margin="408,274,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Tanggal Masuk" HorizontalAlignment="Left" Margin="408,234,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <DatePicker HorizontalAlignment="Left" Margin="513,237,0,0" VerticalAlignment="Top" Width="198" BorderBrush="#89000000" FontSize="12" FontWeight="Bold" Background="#FFF31212" Foreground="Black"/>
+                            <Label Content="Agama" HorizontalAlignment="Left" Margin="408,115,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="509,117,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+                            <Label Content="Degree" HorizontalAlignment="Left" Margin="408,314,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="24" Margin="508,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000"/>
+                            <Label Content="Jurusan" HorizontalAlignment="Left" Margin="408,354,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Job Title" HorizontalAlignment="Left" Margin="4,354,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox HorizontalAlignment="Left" Height="24" Margin="128,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000"/>
+                            <Label Content="Department" HorizontalAlignment="Left" Margin="410,35,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="509,36,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+                            <Label Content="Provinsi" HorizontalAlignment="Left" Margin="3,192,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="129,193,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+                            <Label Content="Kabupaten/Kota" HorizontalAlignment="Left" Margin="3,233,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="129,234,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="509,316,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="509,356,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#89000000" OpacityMask="Black" FontSize="12"/>
+
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Tambah" HorizontalAlignment="Left" Margin="642,579,0,0" VerticalAlignment="Top" Width="98" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Daftar Karyawan" FontSize="16" Height="27" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="128*"/>
+                        <ColumnDefinition Width="715*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid HorizontalAlignment="Left" Height="452" Margin="7,22,0,0" VerticalAlignment="Top" Width="826" Grid.ColumnSpan="2" Background="#FFACDEA1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="193*"/>
+                            <RowDefinition Height="72*"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid HorizontalAlignment="Left" Height="405" Margin="43,21,0,0" VerticalAlignment="Top" Width="743" Background="White" Grid.RowSpan="2"/>
+                    </Grid>
+                    <Button Content="HAPUS" Grid.Column="1" HorizontalAlignment="Left" Margin="576,490,0,0" VerticalAlignment="Top" Width="88" Background="#FFF92D2D" FontSize="16" FontWeight="Bold" BorderBrush="White"/>
+                    <Button Content="EDIT" Grid.Column="1" HorizontalAlignment="Left" Margin="460,490,0,0" VerticalAlignment="Top" Width="88" Background="#FFF3EB41" FontSize="16" FontWeight="Bold" BorderBrush="White"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Department" FontSize="16" Height="27" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5" Margin="4,0,1,7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="961*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Data Department" HorizontalAlignment="Left" Height="170" Margin="3,14,0,0" VerticalAlignment="Top" Width="758" Background="#FFF9F9F9" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid Background="#FFE1F9D6">
+                            <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="22" Margin="131,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12" IsReadOnly="True" IsEnabled="False"/>
+                            <Label Content="Id" HorizontalAlignment="Left" Margin="3,19,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox x:Name="txtDept" HorizontalAlignment="Left" Height="24" Margin="131,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Nama  Divisi" HorizontalAlignment="Left" Margin="3,59,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Department" HorizontalAlignment="Left" Margin="398,20,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Manager" HorizontalAlignment="Left" Margin="398,60,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox x:Name="txtManager" HorizontalAlignment="Left" Height="22" Margin="507,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <ComboBox x:Name="cmbDivisi" HorizontalAlignment="Left" Margin="509,19,0,0" VerticalAlignment="Top" Width="197" Background="{x:Null}" BorderBrush="#89000000" OpacityMask="Black"  ItemsSource="{Binding Path=getDivision}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="CmbDivisi_SelectionChanged" Loaded="CmbDivisi_Loaded"/>
+
+                        </Grid>
+                    </GroupBox>
+                    <DataGrid x:Name="dg_Departement" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="256" Margin="1,202,0,0" VerticalAlignment="Top" Width="757" Grid.ColumnSpan="2" Background="#FFE1F9D6" Grid.Column="1" Loaded="Dg_Departement_Loaded" SelectedCellsChanged="Dg_Departement_SelectedCellsChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Department" Binding="{Binding Path=Name_Department}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Manager" Binding="{Binding Path=Manager}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Divisi" Binding="{Binding Path=Division}"></DataGridTextColumn>
+                           
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Content="TAMBAH" HorizontalAlignment="Left" Margin="429,482,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8" Click="Button_Click"/>
+                    <Button Content="HAPUS" HorizontalAlignment="Left" Margin="660,482,0,0" VerticalAlignment="Top" Width="89" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8" Background="#FFEA2D2D" Click="Button_Click_2"/>
+
+                    <Button Content="UBAH" HorizontalAlignment="Left" Margin="558,482,0,0" VerticalAlignment="Top" Width="77" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8" Background="#FFE1EA31" Click="Button_Click_1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Daftar Department" FontSize="16" Height="27" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="128*"/>
+                        <ColumnDefinition Width="715*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid HorizontalAlignment="Left" Height="452" Margin="7,22,0,0" VerticalAlignment="Top" Width="826" Grid.ColumnSpan="2" Background="#FFACDEA1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="193*"/>
+                            <RowDefinition Height="72*"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid HorizontalAlignment="Left" Height="405" Margin="43,21,0,0" VerticalAlignment="Top" Width="743" Background="White" Grid.RowSpan="2"/>
+                    </Grid>
+                    <Button Content="HAPUS" Grid.Column="1" HorizontalAlignment="Left" Margin="576,490,0,0" VerticalAlignment="Top" Width="88" Background="#FFF92D2D" FontSize="16" FontWeight="Bold" BorderBrush="White"/>
+                    <Button Content="EDIT" Grid.Column="1" HorizontalAlignment="Left" Margin="460,490,0,0" VerticalAlignment="Top" Width="88" Background="#FFF3EB41" FontSize="16" FontWeight="Bold" BorderBrush="White"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

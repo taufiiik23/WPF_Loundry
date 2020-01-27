@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Loundry"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
@@ -27,38 +28,36 @@
 
 
             <Image Source="/assets/bangkinang.png" RenderTransformOrigin="0.512,0.488" Margin="0,83,0,261"/>
-            <TextBox Name="tb_Email" Height="25" 
+            <TextBox Name="tb_Email" 
                          FontFamily="Halvetica"
-                         FontWeight="Light" 
-                         Text="E-mail" 
+                         FontWeight="Heavy" 
+                         materialDesign:HintAssist.Hint="Email"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          FontSize="20"
-                         HorizontalAlignment="Left"
                          Foreground="White"
                          Background="Transparent"
                          BorderThickness="0"
-                         Width="300"
-                         HorizontalContentAlignment="Center"
+                         Width="248"
+                         HorizontalContentAlignment="Left"
                          Opacity="0.5"
-                         Margin="53,338,0,237">
-
-            </TextBox>
+                         Margin="76,328,74,186"/>
             <iconPacks:PackIconMaterial Kind="Account"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          Foreground="White" Margin="310,343,76,243" Height="14" Width="14"/>
             <PasswordBox Name="tb_Password" FontFamily="Helvetica"
-                            FontWeight="Light"
-                            Password="Password"
+                            FontWeight="Black"
+                            materialDesign:HintAssist.Hint="Password"
+                            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                         
                             FontSize="20"
-                            HorizontalAlignment="Center"
                             Foreground="White"
                             Background="Transparent"
                             BorderThickness="0"
-                            Width="300"
-                            HorizontalContentAlignment="Center"
+                            Width="250"
+                            HorizontalContentAlignment="Left"
                             Opacity="0.5"
-                            Height="25"
-                            Margin="53,385,47,190"/>
+                            Margin="76,376,74,186"/>
             <iconPacks:PackIconMaterial Kind="TextboxPassword"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
@@ -66,7 +65,7 @@
             <Border Width="250"
                        Height="2"
                        Background="White"
-                       Opacity="0.5" Margin="76,361,74,237"/>
+                       Opacity="0.5" Margin="76,365,74,233"/>
             <Border Width="250"
                 Height="2"
                 Background="White"

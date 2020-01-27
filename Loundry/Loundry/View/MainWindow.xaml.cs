@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Dapper;
+using Loundry.View;
 
 namespace Loundry
 {
@@ -24,7 +25,7 @@ namespace Loundry
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
 
         public MainWindow()
         {
@@ -39,7 +40,10 @@ namespace Loundry
 
             if (check != null)
             {
-                MessageBox.Show("Login Sukses");
+                this.Hide();
+                new Home().Show();
+                //MessageBox.Show("Selamat");
+
             }
             else
             {
