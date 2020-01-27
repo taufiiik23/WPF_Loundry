@@ -93,20 +93,20 @@
                             <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="22" Margin="131,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12" IsReadOnly="True" IsEnabled="False"/>
                             <Label Content="Id" HorizontalAlignment="Left" Margin="3,19,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
                             <TextBox x:Name="txtDept" HorizontalAlignment="Left" Height="24" Margin="131,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
-                            <Label Content="Nama  Divisi" HorizontalAlignment="Left" Margin="3,59,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
-                            <Label Content="Department" HorizontalAlignment="Left" Margin="398,20,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Department" HorizontalAlignment="Left" Margin="3,59,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Divisi" HorizontalAlignment="Left" Margin="398,20,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
                             <Label Content="Manager" HorizontalAlignment="Left" Margin="398,60,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
                             <TextBox x:Name="txtManager" HorizontalAlignment="Left" Height="22" Margin="507,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
-                            <ComboBox x:Name="cmbDivisi" HorizontalAlignment="Left" Margin="509,19,0,0" VerticalAlignment="Top" Width="197" Background="{x:Null}" BorderBrush="#89000000" OpacityMask="Black"  ItemsSource="{Binding Path=getDivision}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="CmbDivisi_SelectionChanged" Loaded="CmbDivisi_Loaded"/>
+                            <ComboBox x:Name="cmbDivisi" Foreground="Black" HorizontalAlignment="Left" Margin="509,19,0,0" VerticalAlignment="Top" Width="197" Background="{x:Null}" BorderBrush="#89000000" OpacityMask="Black"  ItemsSource="{Binding Path=getDivision}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="CmbDivisi_SelectionChanged" Loaded="CmbDivisi_Loaded"/>
 
                         </Grid>
                     </GroupBox>
                     <DataGrid x:Name="dg_Departement" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="256" Margin="1,202,0,0" VerticalAlignment="Top" Width="757" Grid.ColumnSpan="2" Background="#FFE1F9D6" Grid.Column="1" Loaded="Dg_Departement_Loaded" SelectedCellsChanged="Dg_Departement_SelectedCellsChanged">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="Nama Department" Binding="{Binding Path=Name_Department}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="Nama Manager" Binding="{Binding Path=Manager}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="Nama Divisi" Binding="{Binding Path=Division}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Id" Foreground="Black" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Department" Foreground="Black" Binding="{Binding Path=Name_Department}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Manager" Foreground="Black" Binding="{Binding Path=Manager}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Divisi" Foreground="Black" Binding="{Binding Path=Division}"></DataGridTextColumn>
                            
                             
                         </DataGrid.Columns>

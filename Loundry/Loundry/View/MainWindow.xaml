@@ -71,12 +71,13 @@
                 Background="White"
                 Opacity="0.5" Margin="76,415,74,183"/>
 
-            <Button  FontWeight="ExtraBold" BorderThickness="0"  Width="100" Height="40" Content="LOGIN" Margin="159,445,141,115" Click="Button_Click"/>
+            <Button  FontWeight="ExtraBold" BorderThickness="0"  Width="100" Height="40" Content="LOGIN" Margin="159,480,141,80" Click="Button_Click"/>
 
 
 
 
 
         </Grid>
+        <Button Content="Register?" HorizontalAlignment="Left" Margin="245,428,0,0" VerticalAlignment="Top" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_1"/>
     </Grid>
 </Window>

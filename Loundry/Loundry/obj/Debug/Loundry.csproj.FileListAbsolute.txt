@@ -56,3 +56,7 @@ D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\View\Home.baml
 D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\Loundry.csprojAssemblyReference.cache
 D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\View\Manage.g.cs
 D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\View\Manage.baml
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\bin\Debug\BCrypt.Net.dll
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\bin\Debug\BCrypt.Net.xml
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\View\Register.g.cs
+D:\CloneGit\WPF_Loundry\Loundry\Loundry\obj\Debug\View\Register.baml

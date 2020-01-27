@@ -1,5 +1,4 @@
-﻿using Loundry.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -25,7 +24,8 @@ namespace Loundry
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+        SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+        SqlConnection sqlConnect = new SqlConnection(connect);
 
         public MainWindow()
         {
@@ -34,23 +34,26 @@ namespace Loundry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var check = connection.QueryAsync<Login>("EXEC SP_Retrieve_Login_loundry @email,@password",
-                new { email = tb_Email.Text, password = tb_Password.Password }).Result.SingleOrDefault();
+            string myPassword = tb_Password.Password;
+            string myHash = BCrypt.Net.BCrypt.HashPassword(myPassword);
+            var getPassword = sqlConnect.Query<Account1>("select * from TB_M_User where Email = @Email", new { Email = tb_Email.Text }).SingleOrDefault();
 
-
-            if (check != null)
+            var result = BCrypt.Net.BCrypt.Verify(myPassword, getPassword.Password);
+            if(getPassword.Role == "Admin")
             {
+                var manage = new Home();
+                manage.Show();
                 this.Hide();
-                new Home().Show();
-                //MessageBox.Show("Selamat");
-
+                MessageBox.Show("Welcome to Dashboard Admin");
             }
             else
             {
-                MessageBox.Show("Login gagal");
+                var manage = new Home();
+                manage.Show();
+                manage.listViewItem1.Visibility = Visibility.Hidden;
+                this.Hide();
+                MessageBox.Show("Welcome to Dashboard Borrr");
             }
-
-
             //    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FMOKJG0\OPIK;Initial Catalog=Bootcamp; User ID=sa;Password=opik;");
             //try
             //{
@@ -80,6 +83,12 @@ namespace Loundry
             //{
             //    con.Close();
             //}
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new Register().Show();
         }
     }
 }

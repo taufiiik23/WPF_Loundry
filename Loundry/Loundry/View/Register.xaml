@@ -1,0 +1,53 @@
+﻿<Window x:Class="Loundry.View.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Loundry.View"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="Register" Height="600" Width="400">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition>
+
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Margin="-2,2,2,1">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="CadetBlue" Offset="1"/>
+                        <GradientStop Color="Coral" 
+                                      Offset="2"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <Image Source="/assets/bangkinang.png" RenderTransformOrigin="0.512,0.488" Margin="2,-10,-2,399"/>
+
+            <iconPacks:PackIconMaterial Kind="AccountCircle" VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" Foreground="White" Margin="283,237,73,307" Width="36" Height="25"/>
+
+            <iconPacks:PackIconMaterial Kind="TextboxPassword" VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" Foreground="White" Height="26" Margin="290,290,76,253" Width="26"/>
+            <ComboBox x:Name="cb_Role" HorizontalAlignment="Left" Margin="69,339,0,0" VerticalAlignment="Top" Width="251" BorderBrush="#89000000" Background="{x:Null}" Height="32" OpacityMask="Black">
+                <ComboBoxItem Content="Admin"/>
+                <ComboBoxItem Content="User"/>
+            </ComboBox>
+
+
+            <Button x:Name="btn_Register"  FontWeight="ExtraBold" BorderThickness="0"  Width="100" Height="40" Content="Register" Margin="148,430,144,99" Click="Btn_Register_Click"/>
+            <TextBlock x:Name="HaveAccount" HorizontalAlignment="Left" Margin="168,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Width="152" Height="25"><Run Text="Already Have Account ?"/><LineBreak/><Run/></TextBlock>
+            <TextBox x:Name="tb_email" HorizontalAlignment="Left" Height="42" Margin="70,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" FontSize="14" SelectionBrush="{x:Null}" BorderBrush="#89000000"/>
+            <PasswordBox x:Name="tb_password" HorizontalAlignment="Left" Margin="69,277,0,0" VerticalAlignment="Top" Width="263" Height="44" SelectionBrush="{x:Null}" BorderBrush="#89000000"/>
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

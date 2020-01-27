@@ -96,7 +96,7 @@ namespace Loundry.View
 
             };
             Controller.Insert(param);
-            MessageBox.Show("Data Saved Successfully");
+            MessageBox.Show("Data Saved");
             EmptyDetail();
             LoadGridCombo();
 
@@ -112,7 +112,7 @@ namespace Loundry.View
 
             };
             Controller.Update(Convert.ToInt16(txtID.Text), param);
-            MessageBox.Show("Data Updated Successfully");
+            MessageBox.Show("Data Updated");
             EmptyDetail();
             LoadGridCombo();
 
@@ -121,7 +121,7 @@ namespace Loundry.View
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Controller.Delete(Convert.ToInt16(txtID.Text));
-            MessageBox.Show("Data Deleted Successfully");
+            MessageBox.Show("Data Deleted");
             EmptyDetail();
             LoadGridCombo();
 

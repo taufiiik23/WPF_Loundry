@@ -136,8 +136,8 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="AccountMultipleAdd" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Manage Karyawan" Margin="10" VerticalAlignment="Center"/>
+                        <materialDesign:PackIcon Kind="DatabaseAdd" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Margin="10" VerticalAlignment="Center"><Run Text="Manage "/><Run Text="Data"/></TextBlock>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem x:Name="listViewItem2" Height="60" RenderTransformOrigin="0.5,0.5">
