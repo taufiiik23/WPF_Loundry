@@ -227,11 +227,12 @@
                     </StackPanel>
                 </Grid>
             </Grid>
+            <Label Content="Selamat Datang, mau melihat menu silahkan klik button &#xA;di pojok Kiri atas" HorizontalAlignment="Left" Margin="308,166,0,0" VerticalAlignment="Top" Width="516" Foreground="#DD000000" FontSize="20"/>
         </Grid>
-        
-        
-        
-        
+
+
+
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" HorizontalAlignment="Right" Margin="10">
             <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="Black" BorderBrush="Aqua">
                 <materialDesign:PackIcon Kind="Bell"/>

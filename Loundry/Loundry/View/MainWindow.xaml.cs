@@ -25,7 +25,7 @@ namespace Loundry
     public partial class MainWindow : Window
     {
         SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-        SqlConnection sqlConnect = new SqlConnection(connect);
+
 
         public MainWindow()
         {
@@ -36,7 +36,7 @@ namespace Loundry
         {
             string myPassword = tb_Password.Password;
             string myHash = BCrypt.Net.BCrypt.HashPassword(myPassword);
-            var getPassword = sqlConnect.Query<Account1>("select * from TB_M_User where Email = @Email", new { Email = tb_Email.Text }).SingleOrDefault();
+            var getPassword = connect.Query<Account1>("select * from TB_M_User where Email = @Email", new { Email = tb_Email.Text }).SingleOrDefault();
 
             var result = BCrypt.Net.BCrypt.Verify(myPassword, getPassword.Password);
             if(getPassword.Role == "Admin")
